@@ -1,7 +1,9 @@
 Para relembrar…   \
 Nada mais prático que um guia rápido para a customização de sistemas com a arquitetura estudada neste ebook. Assim, segue uma sequência de passos que mostra de forma clara o quanto é simples customizar uma aplicação na abordagem aqui proposta. Os passos são:  \
+
 1) Criar o ambiente operacional. Para isso, basta seguir o processo descrito nessa Unidade.   \
-2) Baixar os códigos do github. Os códigos podem ser obtidos com a digitação, em um browse, do seguinte URL:  \
+   
+3) Baixar os códigos do github. Os códigos podem ser obtidos com a digitação, em um browse, do seguinte URL:  \
 
 https://github.com/AKCIT-Geral/RH-NLP-M10-APMPEPM-V1 ou 
 https://github.com/sandrerleypires/ebook10.git
@@ -42,6 +44,7 @@ ebook10/  \
 
 
 3) Como Customizar o SAD  \
+   
 Criação do banco de dados do Gerenciador de Mensagem. Em uma Janela de Comando, digite:  \
 ...\sad> python ..\arquitetura\bd.py -dbname message.db -r  \
 
@@ -63,6 +66,7 @@ Após esses passos é possível acessar o SAD em um browser web.  \
 O endereço a ser digitado no browser é: http://127.0.0.1:5000  \
 
 4) Customizar o chatbot  \
+   
 Criação do banco de dados do Gerenciador de Mensagem. Em uma Janela de Comando, digite:  \
 ...\chatbot> python ..\arquitetura\bd.py -dbname message.db -r  \
 
