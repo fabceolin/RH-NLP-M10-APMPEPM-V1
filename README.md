@@ -10,7 +10,7 @@ https://github.com/sandrerleypires/ebook10.git
      A seguinte estrutura deve ser o resultado final da obtenção dos códigos: 
 
 ebook10/
-   │── arquitetura/
+    │── arquitetura/
    │   ├── app.py             # Front-End. Aplicação utilizada pelo Flask. Interfaces WEB.
    
    │   ├── bd.py              # Back-End. Cria db para o Gerenciador Assíncrono de mensagem
