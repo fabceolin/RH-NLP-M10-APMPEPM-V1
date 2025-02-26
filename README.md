@@ -10,7 +10,7 @@ https://github.com/sandrerleypires/ebook10.git
 A seguinte estrutura deve ser o resultado final da obtenção dos códigos:  \
 ebook10/  \
    │── arquitetura/  \
-   │   ├── app.py             \t# Front-End. Aplicação utilizada pelo Flask. Interfaces WEB.  \
+   │   ├── app.py             # Front-End. Aplicação utilizada pelo Flask. Interfaces WEB.  \
    │   ├── bd.py              # Back-End. Cria db para o Gerenciador Assíncrono de mensagem  \
    │   ├── business_rules_be  # Back-End. Cria Regras de Negócio na Base de conhecimento.   \
    │   ├── business_rules_fe  # Front-End. Cria regras de negócio na base de conhecimento.  \
