@@ -8,70 +8,10 @@ https://github.com/AKCIT-Geral/RH-NLP-M10-APMPEPM-V1 ou
 https://github.com/sandrerleypires/ebook10.git
 
      A seguinte estrutura deve ser o resultado final da obtenção dos códigos: 
+     ![image](https://github.com/user-attachments/assets/5de6592c-4e16-4cdf-af36-f5efa663ae3e)
 
-ebook10/\n
-    │── arquitetura/
-   │   ├── app.py             # Front-End. Aplicação utilizada pelo Flask. Interfaces WEB.
-   
-   │   ├── bd.py              # Back-End. Cria db para o Gerenciador Assíncrono de mensagem
-   
-   │   ├── business_rules_be  # Back-End. Cria Regras de Negócio na Base de conhecimento. 
-   
-   │   ├── business_rules_fe  # Front-End. Cria regras de negócio na base de conhecimento.
-   
-   │   ├── controlador.py     # Back-End. Interage com gerenciador de mensagem. 
-   
-   │   ├── db_classes.py      # Pacote das funcionalidades de acesso ao banco de dados.
-   
-   │   ├── extract_classes.py	# Pacote com as classes para extração de conteúdo em PDF.
-   
-   │   ├── extract_pdf_be.py	# Back-End. Extraí conteúdo de livros em PDF.
-   
-   │   ├── extract_pdf_fe.py	# Front-End. Extraí conteúdo de livros em PDF.
-   
-   │   ├── extract_sql_be.py	# Back-End. Carrega query na base de conhecimento.
-   
-   │   ├── extract_sql_fe.py  #Front-End. Carrega query na base de conhecimento.
-   
-   │   ├── gerenciador.py	#Back-End. Gerenciador Assíncrono de Mensagens
-   
-   │   ├── virtual_assistant_be.py #Back-End. É o Assistente Virtual. 
-   
-   │   ├── template/
-   
-   │   │   ├── web.html         # Arquivo html com o design da interface web do sistema.
-   
-   │
-   
-   │── chatbot/
-   
-   │   ├── app.py               # Contém a interface web específica para o chatbot
-   
-   │   ├── extract_pdf.json     # Parâmetros para extração do livro em PDF
-   
-   │   ├── virtual_assistant.py # Contém os parâmetros do Assistente Virtual do chatbot.
-   
-   │   ├── template/
-   
-   │   │   ├── chatbot.html     # Arquivo html com o design da interface web do chatbot.
-   
-   │
-   
-   │── sad/
-   
-   │  ├── app.py                # É a interface web específica para a aplicação (SAD.
-   
-   │  ├── sad_sql.json          # Parâmetros para carga do banco de dados.
-   
-   │  ├── business_rules.json   # Contém regras de negócio para o SAD.
-   
-   │  ├── virtual_assistant.py  # Contém os parâmetros do Assistente Virtual do SAD.
-   
-   |  ├── template/
-   
-   │  |   ├── sad.html          # Arquivo html com o design da interface web do SAD.
 
-Customizar o SAD
+Como Customizar o SAD
 Criação do banco de dados do Gerenciador de Mensagem. Em uma Janela de Comando, digite:
 ...\sad> python ..\arquitetura\bd.py -dbname message.db -r
 
