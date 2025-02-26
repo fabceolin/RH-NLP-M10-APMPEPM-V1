@@ -9,7 +9,7 @@ https://github.com/sandrerleypires/ebook10.git
 
      A seguinte estrutura deve ser o resultado final da obtenção dos códigos: 
 
-ebook10/
+ebook10/\n
     │── arquitetura/
    │   ├── app.py             # Front-End. Aplicação utilizada pelo Flask. Interfaces WEB.
    
