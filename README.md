@@ -7,10 +7,10 @@ Baixar os códigos do github. Os códigos podem ser obtidos com a digitação, e
 https://github.com/AKCIT-Geral/RH-NLP-M10-APMPEPM-V1 ou 
 https://github.com/sandrerleypires/ebook10.git
 
-     A seguinte estrutura deve ser o resultado final da obtenção dos códigos:
+     A seguinte estrutura deve ser o resultado final da obtenção dos códigos: 
+
 ebook10/
-  │── arquitetura/
-  
+   │── arquitetura/
    │   ├── app.py             # Front-End. Aplicação utilizada pelo Flask. Interfaces WEB.
    
    │   ├── bd.py              # Back-End. Cria db para o Gerenciador Assíncrono de mensagem
