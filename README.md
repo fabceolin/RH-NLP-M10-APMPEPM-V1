@@ -2,6 +2,7 @@ Para relembrar…
 Nada mais prático que um guia rápido para a customização de sistemas com a arquitetura estudada neste ebook. Assim, segue uma sequência de passos que mostra de forma clara o quanto é simples customizar uma aplicação na abordagem aqui proposta. Os passos são:
 Criar o ambiente operacional. Para isso, basta seguir o processo descrito nessa Unidade. 
 Baixar os códigos do github. Os códigos podem ser obtidos com a digitação, em um browse, do seguinte URL:
+
 https://github.com/AKCIT-Geral/RH-NLP-M10-APMPEPM-V1 ou 
 https://github.com/sandrerleypires/ebook10.git
 
