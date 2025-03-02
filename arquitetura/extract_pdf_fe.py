@@ -46,7 +46,7 @@ if __name__ == "__main__":
     
     # Criar o analisador de argumentos
     parser = argparse.ArgumentParser(description="Criação de arquivo JSON a partir de Livro em formato PDF.")
-    parser.add_argument("-j", default="D:/ebook10/chatbot/extract_pdf.json", help="Nome do arquivo Json com os dados para conversão.)")
+    parser.add_argument("-j", default="../chatbot/extract_pdf.json", help="Nome do arquivo Json com os dados para conversão.)")
     parser.add_argument("-o", default="", help="Nome do arquivo de saída.")
     parser.add_argument("-r", default="", help="Se esta opção é informada, a coleção é recriada.")
     args = parser.parse_args()

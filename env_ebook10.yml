@@ -1,4 +1,4 @@
-name: ebook11
+name: ebook10
 channels:
   - https://conda.anaconda.org/menpo
   - conda-forge
@@ -7,7 +7,6 @@ dependencies:
   - numpy
   - jupyter
   - pandas
-  - openai
   - sqlalchemy
   - psycopg2
   - chromadb
@@ -16,4 +15,5 @@ dependencies:
   - pdftotext
   - flask
   - pip:
-    - langchain_openai
+    - sentence-transformers
+    - google-generativeai

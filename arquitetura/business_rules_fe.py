@@ -43,7 +43,7 @@ if __name__ == "__main__":
     
     # Criar o analisador de argumentos
     parser = argparse.ArgumentParser(description="Criação de coleção com regras de negócio do sistema.")
-    parser.add_argument("-j", default="D:/ebook10/sad/business_rules.json", help="Nome do arquivo Json com as regras de negócio.)")
+    parser.add_argument("-j", default="../sad/business_rules.json", help="Nome do arquivo Json com as regras de negócio.)")
     args = parser.parse_args()
 
     # Se pedido a recriaçãao, então deleta o banco de dados antigo

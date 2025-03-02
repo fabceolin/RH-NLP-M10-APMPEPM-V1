@@ -15,11 +15,11 @@
 #
 #################################################################################################################
 import chromadb
-import openai
 import json
 import os
 from sentence_transformers import SentenceTransformer
-openai.api_key = "informa aqui a openai chave"
+import google.generativeai as genai
+genai.configure(api_key="SUA-KEY")
 
 # Efetua a inicialização da coleção no Chromadb
 def conect_chromadb(local_bd, collection_name):
@@ -57,18 +57,14 @@ def gera_contend(question, local_bd, collections_name):
 def monta_prompt(question, contend, prompt_model):
     texto = prompt_model.replace('<question>', question)
     texto = texto.replace('<contend>', contend)
-    prompt = {"type": "text", 
-              "text": texto
-        }
+    prompt = texto
     return prompt
 
 # Submete o promppt ao LLM
 def call_LLM(prompt):
-    result = openai.chat.completions.create(model = "gpt-3.5-turbo",
-                                            messages = [{"role": "user", 
-                                                         "content": [prompt]
-                                                        }])
-    return result.choices[0].message.content
+    model = genai.GenerativeModel('gemini-1.5-flash')
+    result = model.generate_content(prompt)
+    return result.text
 
 # Efetua a leitura dos parâmetro informados pelo cliente
 def param(message):

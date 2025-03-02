@@ -41,7 +41,7 @@ if __name__ == "__main__":
     
     # Criar o analisador de argumentos
     parser = argparse.ArgumentParser(description="Criação de coleção com informações de um banco de dados.")
-    parser.add_argument("-j", default="D:/ebook10/sad/sad_sql.json", help="Nome do arquivo Json com os dados para extração.)")
+    parser.add_argument("-j", default="../sad/sad_sql.json", help="Nome do arquivo Json com os dados para extração.)")
     parser.add_argument("-c", default="sad_info", help="Nome da coleção da base de conhecimento que armazenará o resultado da extração.")
     args = parser.parse_args()
 

@@ -1,87 +1,149 @@
-Para relembrar…   \
-Nada mais prático que um guia rápido para a customização de sistemas com a arquitetura estudada neste ebook. Assim, segue uma sequência de passos que mostra de forma clara o quanto é simples customizar uma aplicação na abordagem aqui proposta. Os passos são:  \
+# Aplicação Prática de LLMs e engenharia de prompt no mercado (M10)
+Repositório de código referente ao Microcurso 10 da Especialização _lato sesu_ em Processamento de Linguagem Natural (NLP) do **AKCIT** - Centro de Competência EMBRAPII em Tecnologias Imersivas (_Advanced Knowledge Center for Immersive Technologies_).
 
-1) Criar o ambiente operacional. Para isso, basta seguir o processo descrito nessa Unidade.   \
-   
-3) Baixar os códigos do github. Os códigos podem ser obtidos com a digitação, em um browse, do seguinte URL:  \
+## Recomendação
 
-https://github.com/AKCIT-Geral/RH-NLP-M10-APMPEPM-V1 ou 
-https://github.com/sandrerleypires/ebook10.git
+É altamente indicado que você assista a todas as videoaulas do Microcurso 10!
 
-A seguinte estrutura deve ser o resultado final da obtenção dos códigos:  \
-ebook10/  \
-   │── arquitetura/  \
-   │   ├── app.py             # Front-End. Aplicação utilizada pelo Flask. Interfaces WEB.  \
-   │   ├── bd.py              # Back-End. Cria db para o Gerenciador Assíncrono de mensagem  \
-   │   ├── business_rules_be  # Back-End. Cria Regras de Negócio na Base de conhecimento.   \
-   │   ├── business_rules_fe  # Front-End. Cria regras de negócio na base de conhecimento.  \
-   │   ├── controlador.py     # Back-End. Interage com gerenciador de mensagem.   \
-   │   ├── db_classes.py      # Pacote das funcionalidades de acesso ao banco de dados.  \
-   │   ├── extract_classes.py	# Pacote com as classes para extração de conteúdo em PDF.  \
-   │   ├── extract_pdf_be.py	# Back-End. Extraí conteúdo de livros em PDF.  \
-   │   ├── extract_pdf_fe.py	# Front-End. Extraí conteúdo de livros em PDF.  \
-   │   ├── extract_sql_be.py	# Back-End. Carrega query na base de conhecimento.  \
-   │   ├── extract_sql_fe.py  #Front-End. Carrega query na base de conhecimento.  \
-   │   ├── gerenciador.py	#Back-End. Gerenciador Assíncrono de Mensagens  \
-   │   ├── virtual_assistant_be.py #Back-End. É o Assistente Virtual.   \
-   │   ├── template/  \
-   │   │   ├── web.html         # Arquivo html com o design da interface web do sistema.  \
-   │  \
-   │── chatbot/  \
-   │   ├── app.py               # Contém a interface web específica para o chatbot  \
-   │   ├── extract_pdf.json     # Parâmetros para extração do livro em PDF  \
-   │   ├── virtual_assistant.py # Contém os parâmetros do Assistente Virtual do chatbot.  \
-   │   ├── template/  \
-   │   │   ├── chatbot.html     # Arquivo html com o design da interface web do chatbot.  \
-   │  \
-   │── sad/  \
-   │   ├── app.py                # É a interface web específica para a aplicação (SAD.  \
-   │   ├── sad_sql.json          # Parâmetros para carga do banco de dados.  \
-   │   ├── business_rules.json   # Contém regras de negócio para o SAD.  \
-   │   ├── virtual_assistant.py  # Contém os parâmetros do Assistente Virtual do SAD.  \
-   |   ├── template/  \
-   │   |   ├── sad.html          # Arquivo html com o design da interface web do SAD.  \
+## Como executar?
 
+Acompanhe o seguinte passo a passo, criado a partir do material fornecido pelo professor.
 
-3) Como Customizar o SAD  \
-   
-Criação do banco de dados do Gerenciador de Mensagem. Em uma Janela de Comando, digite:  \
-...\sad> python ..\arquitetura\bd.py -dbname message.db -r  \
+As etapas aqui exibidas foram apresentadas durante as vídeoaulas, disponíveis no AVA.
 
-Ativação do Gerenciador Assíncrono de Mensagens:   \
-...\sad> fastapi dev ..\arquitetura\gerenciador.py  \
+1. Baixe o código disponível aqui, nesse repositório, clicando no botão **Code** e depois em **Download ZIP**.
 
- Ativação do controlador. Em uma nova Janela de Comando, digite:   \
-...\sad> python ..\arquitetura\controlador.py  \
+2. Em seguida, extraia o arquivo baixado.
 
-Criação da base de conhecimento a partir de dados de um banco de dados. Inicialmente, deve-se criar arquivos de parâmetros (já existem os arquivos do exemplo). Em um terceira Janela de Comandos, executar:  \
-...\sad> python ..\arquitetura\extract_sql_fe.py  \
-...\sad> python ..\arquitetura\business_rules_fe.py  \
+3. Entre na pasta que acabou de extrair. Ela possui a seguinte estrutura:
+   ```
+   ├── arquitetura
+   │   ├── templates
+   │   ├── app.py
+   │   ├── bd.py
+   │   ├── business_rules_be.py
+   │   ├── business_rules_fe.py
+   │   ├── controlador.py
+   │   ├── db_classes.py
+   │   ├── extract_classes.py
+   │   ├── extract_pdf_be.py
+   │   ├── extract_pdf_fe.py
+   │   ├── extract_sql_be.py
+   │   ├── extract_sql_fe.py
+   │   ├── gerenciador.py
+   │   ├── sad_sql.json
+   │   ├── virtual_assistant_be.py
+   │   └── virtual_assistant.json
+   ├── chatbot
+   │   ├── chroma_db
+   │   ├── templates
+   │   ├── app.py
+   │   ├── extract_pdf.json
+   │   ├── message.db
+   │   └── virtual_assistant.json
+   ├── sad
+   │   ├── chroma_db
+   │   ├── templates
+   │   ├── app.py
+   │   ├── business_rules.json
+   │   ├── message.db
+   │   ├── sad_sql.json
+   │   ├── vendas.db
+   │   └── virtual_assistant.json
+   ├── env_ebook10.yml
+   └── README.md
+   ```
 
-Ativando o Flask. Em uma quarta Janela de Comandos, digitar:  \
-...\sad> set FLASK_APP=app.py  \
-...\sad> python app.py  \
+4. Faça o download do ebook do Microcurso 4 - Introdução a Machine Learning e Redes Neurais. Salve-o na pasta que você acabou de extrair com o nome sugerido. A estrutura deve ficar da seguinte forma:
+   ```
+   ├── arquitetura
+   │   ├── templates
+   │   ├── app.py
+   │   ├── bd.py
+   │   ├── business_rules_be.py
+   │   ├── business_rules_fe.py
+   │   ├── controlador.py
+   │   ├── db_classes.py
+   │   ├── extract_classes.py
+   │   ├── extract_pdf_be.py
+   │   ├── extract_pdf_fe.py
+   │   ├── extract_sql_be.py
+   │   ├── extract_sql_fe.py
+   │   ├── gerenciador.py
+   │   ├── sad_sql.json
+   │   ├── virtual_assistant_be.py
+   │   └── virtual_assistant.json
+   ├── chatbot
+   │   ├── chroma_db
+   │   ├── templates
+   │   ├── app.py
+   │   ├── extract_pdf.json
+   │   ├── message.db
+   │   └── virtual_assistant.json
+   ├── sad
+   │   ├── chroma_db
+   │   ├── templates
+   │   ├── app.py
+   │   ├── business_rules.json
+   │   ├── message.db
+   │   ├── sad_sql.json
+   │   ├── vendas.db
+   │   └── virtual_assistant.json
+   ├── env_ebook10.yml
+   ├── M4_IMLRN_10-12-24.pdf
+   └── README.md
+   ```
 
-Após esses passos é possível acessar o SAD em um browser web.  \
-O endereço a ser digitado no browser é: http://127.0.0.1:5000  \
+---
 
-4) Customizar o chatbot  \
-   
-Criação do banco de dados do Gerenciador de Mensagem. Em uma Janela de Comando, digite:  \
-...\chatbot> python ..\arquitetura\bd.py -dbname message.db -r  \
+> ❗ Antes de prosseguir, assista a Videoaula 2 (Unidade 1 do Microcurso 10). É nessa aula que o professor mostra como instalar o software necessário (Anaconda).
 
-Ativação do Gerenciador Assíncrono de Mensagens:   \
-...\chatbot> fastapi dev ..\arquitetura\gerenciador.py  \
+---
 
- Ativação do controlador. Em uma nova Janela de Comando, digite:   \
-...\chatbot> python ..\arquitetura\controlador.py  \
+5. Se estiver utilizando **Windows**, abra o **Anaconda Powershell Prompt** (conforme a Videoaula 2). Em seguida, navegue até a pasta que você extraiu anteriormente (onde se encontra o arquivo `env_ebook10.yml`). Nessa janela, execute:
 
-Extração do conteúdo do livro e armazenamento desse na base de conhecimento. Inicialmente, deve-se criar arquivos de parâmetros já existe o arquivo do exemplo). Em um terceira Janela de Comandos, executar:  \
-...\chatbot> python ..\arquitetura\extract_pdf_fe.py  \
+   `conda env create -f env_ebook10.yml`
 
-Ativando o Flask. Em uma quarta Janela de Comandos, digite:  \
-...\chatbot> set FLASK_APP=app.py  \
-...\chatbot> python app.py  \
+   > 💡 Você pode tentar usar a tecla TAB após digitar as iniciais do nome do arquivo para autocompletar.
 
-Após esses passos, é possível acessar o SAD em um browser web.   \
-O endereço a ser digitado no browser é: http://127.0.0.1:5000   \
+   > ❗ Essa etapa pode demorar um pouco. Aguarde até que esteja finalizado para continuar. Com a execução finalizada, feche a janela.
+
+6. Edite o arquivo `arquitetura/virtual_assistant_be.py`, alterando a linha:
+
+   `genai.configure(api_key="SUA-KEY")`.
+
+   Você deve substituir o texto `SUA-KEY`por uma *key* pessoal e válida. Pode ser a *key* que você gerou no **Microcurso 9**. Salve e feche o arquivo.
+
+7. Abra quatro janelas do **Anaconda Powershell Prompt** e navegue até a pasta que extraiu inicialmente. Você precisa fazer isso nas quatro janelas.
+
+8. Em cada uma das quatro janelas, digite:
+
+   `conda activate ebook10`
+
+9. Nas quatro janelas, acesse a pasta `chatbot`.
+
+   `cd chatbot`
+
+10. Na primeira janela, digite: 
+
+      `python ../arquitetura/bd.py -dbname message.db -r` \
+      `fastapi dev ../arquitetura/gerenciador.py`
+
+11. Na segunda janela, digite: 
+
+      `python ../arquitetura/controlador.py`
+
+12. Na terceira janela, digite:
+
+      `set FLASK_APP=app.py` \
+      `python app.py`
+
+14. Na quarta janela, digite:
+
+      `python ../arquitetura/extract_pdf_fe.py -j ./extract_pdf.json`
+
+15. Quando o comando anterior finalizar, acesse o seguinte endereço utilizando seu navegador de Internet (Chrome, Firefox, Safari, etc): `127.0.0.1:5000` ou `localhost:5000`. Agora, basta interagir com o chatbot.
+
+> ❗ Lembre-se de **aguardar** após clicar em **Enviar**.
+
+> 🎓 *Todos os passos descritos anteriormente foram extraídos do material disponibilizado pelo professor.*
