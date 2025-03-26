@@ -26,7 +26,7 @@ def send_message(user_question):
         "sender":   "sad_fe",
         "receiver": "virtual_assistant_be",
         "control":  5,
-        "content":  user_question+'@./sad/virtual_assistant.json',    
+        "content":  user_question+'@./virtual_assistant.json',    
         "log":      "False",
         "status":   "E"
         }
