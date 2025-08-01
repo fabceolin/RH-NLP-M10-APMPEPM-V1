@@ -20,6 +20,7 @@ from extract_pdf_be import _extract_pdf_be
 from extract_sql_be import _extract_sql_be 
 from business_rules_be import _business_rules_be
 from virtual_assistant_be import _virtual_assistant_be
+from extract_email_be import _extract_email_be
 #
 # Tasks que tratam as tarefas oferecidas pela arquitetura
 #
@@ -34,6 +35,9 @@ async def virtual_assistant_be(nmsg, message):
 
 async def business_rules_be(nmsg, message):
     return _business_rules_be(nmsg, message)
+
+async def extract_email_be(nmsg, message):
+    return _extract_email_be(nmsg, message)
 #
 #  Função chamada automaticamente quando a tarefa termina.
 #
@@ -58,8 +62,8 @@ async def process_messages(API_URL):
 #
 async def main():
     # Relação dos serviços disponíveis de serem chamados
-    servicos   = ['extract_pdf_be', 'extract_sql_be', 'virtual_assistant_be', 'business_rules_be']
-    tasks_call = [extract_pdf_be,    extract_sql_be,   virtual_assistant_be, business_rules_be]
+    servicos   = ['extract_pdf_be', 'extract_sql_be', 'virtual_assistant_be', 'business_rules_be', 'extract_email_be']
+    tasks_call = [extract_pdf_be,    extract_sql_be,   virtual_assistant_be, business_rules_be, extract_email_be]
     
     # relação das tasks já executadas 
     task  = []

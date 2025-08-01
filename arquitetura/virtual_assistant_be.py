@@ -19,7 +19,7 @@ import json
 import os
 from sentence_transformers import SentenceTransformer
 import google.generativeai as genai
-genai.configure(api_key="SUA-KEY")
+genai.configure(api_key="AIzaSyC1sVtOwAPOTUlQx8yogDePbFDng6f2NQM")
 
 # Efetua a inicialização da coleção no Chromadb
 def conect_chromadb(local_bd, collection_name):

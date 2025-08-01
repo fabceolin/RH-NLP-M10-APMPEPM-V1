@@ -34,7 +34,7 @@ def _extract_pdf_be(nmsg, message):
     path_out = ""
     if not os.path.exists(parm_file):
        resp = "O arquivo de parâmetros não existe:" + parm_file
-       return False, resp
+       return nmsg, False, resp
     else:
         with open(parm_file, 'r', encoding='utf-8') as fp:
             parametros = json.load(fp)
@@ -58,7 +58,7 @@ def _extract_pdf_be(nmsg, message):
                 collection_name = parametros['collection'] 
             except:
                 resp = "Problema na obtenção dos parâmetros. Possível arquivo inválido."
-                return False, resp
+                return nmsg, False, resp
             
     Ok, resp_1, titulo = _livro_pdf2json(livro, filename, path_in, path_out, parm_out_file)
     if Ok:
