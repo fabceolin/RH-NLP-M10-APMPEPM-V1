@@ -54,7 +54,7 @@ if __name__ == "__main__":
     # Laço de espera pelo resultado
     API_URL = "http://localhost:8000/finished/" + str(response.json())
     start_time = time.time()
-    max_seconds = 120  # 2 minutos para dados de email (pode ser mais demorado)
+    max_seconds = 3600  # 60 minutos para dados de email (1600 emails)
     
     print("Aguardando processamento...")
     
